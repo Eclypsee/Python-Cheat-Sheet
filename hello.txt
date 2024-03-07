@@ -1,0 +1,12 @@
+1     2 😀
+one       5
+
+
+hello world!
+ 3+     tabBegin    tabEnd  . a 5
+
+
+    this is a text file. this line is indented with a tab
+    this is a text file. this line is indented using 4 spaces
+
+

@@ -138,6 +138,7 @@ if __name__ == '__main__':
             if ls[j]<ls[min_i]:
                 min_i = j
         ls[min_i], ls[i] = ls[i], ls[min_i]
+    print('selection sorted')
 
     # insertion sort
     ls = l1[:]
@@ -145,4 +146,23 @@ if __name__ == '__main__':
         for j in range(i, 0, -1):
             if ls[j]<ls[j-1]:
                 ls[j], ls[j-1] = ls[j-1], ls[j]
+    print('insertion sorted')
 
+    ##############################################################################
+    print("##################################### file reading #####################################")
+    # reads a file hello.txt and makes removes extraneous spaces
+    # then this writes the output to output.txt. it creates the file if it does not exist, and appends to it
+    with open('hello.txt') as f:
+        with open('output.txt', 'a') as t:
+            for line in f:
+                line = line.strip()# removes leading and trailing whitespace characters
+                if not line == '':
+                    previous_element = ''
+                    for element in line:
+                        if not previous_element == ' ' or not element == ' ':
+                            t.write(f'{element}')
+                            print(element, end="")
+                        previous_element = element
+                    t.write(f'\n')
+                    print()
+            t.write(f'\n')

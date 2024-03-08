@@ -105,6 +105,7 @@ if __name__ == '__main__':
     print(example[1:6])
     # 3rd index to the last term
     print(example[3:-1])
+    print(" adsf .asd.  12 41".split())
 
 
     ##############################################################################
@@ -131,7 +132,7 @@ if __name__ == '__main__':
     l1 = [5, 4, 3, 7, 2, 1, 5, 7]
 
     #selection sort
-    ls = l1[:]
+    ls = l1[:]# copies the list l1
     for i in range(len(ls)):
         min_i = i
         for j in range (i, len(ls)):
@@ -153,7 +154,7 @@ if __name__ == '__main__':
     # reads a file hello.txt and makes removes extraneous spaces
     # then this writes the output to output.txt. it creates the file if it does not exist, and appends to it
     with open('hello.txt') as f:
-        with open('output.txt', 'a') as t:
+        with open('output.txt', 'a') as t: # change the a to w for overwrite tbe file output.txt
             for line in f:
                 line = line.strip()# removes leading and trailing whitespace characters
                 if not line == '':
@@ -166,3 +167,22 @@ if __name__ == '__main__':
                     t.write(f'\n')
                     print()
             t.write(f'\n')
+
+
+    ##############################################################################
+    print("##################################### Exception Handling #############################")
+    try:
+        int("abcd") # throws a value error
+        ls = [0,1,2]
+        print(ls[-10])
+        print(1 / 0)
+
+
+    except ZeroDivisionError:
+        print("do not divide by zero")
+    except (ValueError, IndexError):
+        print("index out of range or value error")
+    except:
+        print("some error occured")
+    finally:
+        print("this statement runs no matter what happens")

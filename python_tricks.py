@@ -6,6 +6,9 @@
 #         self.assertEqual(3, 3) # expected, actual
 #     def test_2(self):
 #         self.assertAlmostEqual(3.00000001, 3.00000002) # expected, actual
+#     def test_3(self):
+#         with self.assertRaises(TypeError): # this should throw a type error if the functions supports it
+#             add_numbers("asdf", 3)
 # if __name__ == '__main__':
 #     unittest.main()
 

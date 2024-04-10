@@ -20,7 +20,7 @@
 
 ##############################################################################
 # example function with docstring
-def example(k:int, j:int)->int:
+def example(k:int, j:int)->None:
     """example docstring"""
     print("example:", k+j, "apples")
 
